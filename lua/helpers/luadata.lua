@@ -199,6 +199,14 @@ do -- option extension
 		encode = util.TableToJSON
 		
 		MsgN("[luadata] reverting to json since glon cannot be found")
+	else
+		
+		-- oh ye!
+		decode = glon.decode
+		encode = glon.encode
+		
+--		MsgN("[luadata] glon was found")
+		
 	end
 
 	function luadata.AccessorFunc(tbl, func_name, var_name, nw, def)
